@@ -24,7 +24,7 @@ Lanczos近似 は以下のように、適切な定数`g`に依存する係数列
 > ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/63215a71cb9d0058b928f302856859a89045acd2)  
 > \* [Lanczos approximation](https://en.wikipedia.org/wiki/Lanczos_approximation)：[Wikipedia](https://en.wikipedia.org)
 
-ガンマ関数は、発散する特異点を含まない正の定義域においても非常に大きな値となるので、[倍精度浮動小数点数](https://ja.wikipedia.org/wiki/倍精度浮動小数点数)（Double型）で計算したとしても、**`約172.6 < x`** の定義域においてオーバーフローが避けられない。
+ガンマ関数は、発散する特異点を含まない正の定義域においても非常に大きな値となるので、[倍精度浮動小数点数](https://ja.wikipedia.org/wiki/倍精度浮動小数点数)（Double型）で計算したとしても、**約 172.7 以上**の定義域における[算術オーバーフロー](https://ja.wikipedia.org/wiki/算術オーバーフロー)が避けられない。
 
 
 そこで、ガンマ関数を利用する諸計算には、ガンマ関数の対数である [**対数ガンマ関数（log-gamma function）**](https://en.wikipedia.org/wiki/Gamma_function#The_log-gamma_function)を間接的に利用した方が扱いやすい。
