@@ -44,11 +44,11 @@ Lanczos近似 は以下のように、適切な定数`g`に依存する係数列
     Lanczos近似に忠実な実装。
     * `function LnGammaP*( const X_:Double ) :Double;`  
         > 正の定義域のみの対数ガンマ関数。
-    * `function LnGamma*( const X_:Double ) :Double;`
+    * `function LnGamma*( const X_:Double ) :Double;`  
         > 対数ガンマ関数（負の値域は未定義）。
-    * `function GammaP*( const X_:Double ) :Double;`
+    * `function GammaP*( const X_:Double ) :Double;`  
         > 正の定義域のみのガンマ関数（対数ガンマ関数から逆算）。
-    * `function Gamma*( const X_:Double ) :Double;`
+    * `function Gamma*( const X_:Double ) :Double;`  
         > ガンマ関数（対数ガンマ関数から逆算）。
 * `LUX.Math.Special.Gamma.Ooura`.pas  
     [大浦拓哉](http://www.kurims.kyoto-u.ac.jp/~ooura/profile-j.html)氏による最適化実装。
@@ -58,9 +58,9 @@ Lanczos近似 は以下のように、適切な定数`g`に依存する係数列
         > 正の定義域のみの対数ガンマ関数。
     * `function LnGamma( const X_:Double ) :Double;`  
         > 対数ガンマ関数（負の値域は未定義）。
-    * `function GammaP( const X_:Double ) :Double;`
+    * `function GammaP( const X_:Double ) :Double;`  
         > 正の定義域のみのガンマ関数（対数ガンマ関数から逆算）。
-    * `function Gamma( const X_:Double ) :Double;`
+    * `function Gamma( const X_:Double ) :Double;`  
         > ガンマ関数（対数ガンマ関数から逆算）。
 
 ----
