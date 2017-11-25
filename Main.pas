@@ -51,6 +51,8 @@ var
 begin
      with Memo1 do
      begin
+          BeginUpdate;
+
           Lines.Clear;
 
           N := EditN.Text.ToInteger;
@@ -69,6 +71,8 @@ begin
 
                Lines.Add( X.ToString + '	' + S );
           end;
+
+          EndUpdate;
 
           SelectAll;
           SetFocus;
