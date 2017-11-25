@@ -5,7 +5,8 @@ interface //####################################################################
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
-  FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo, FMX.StdCtrls, FMX.Edit;
+  FMX.StdCtrls, FMX.Edit, FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo,
+  LUX;
 
 type
   TForm1 = class(TForm)
@@ -33,8 +34,8 @@ implementation //###############################################################
 
 {$R *.fmx}
 
-uses LUX.Math.Gamma.Ooura,
-     LUX.Math.Gamma.Lanczos;
+uses LUX.Math.Special.Gamma.Ooura,
+     LUX.Math.Special.Gamma.Lanczos;
 
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& private
 
@@ -61,7 +62,7 @@ begin
           begin
                X := ( X1 - X0 ) / N * I + X0;
 
-               G := LUX.Math.Gamma.Ooura.Gamma( X );
+               G := LUX.Math.Special.Gamma.Ooura.Gamma( X );
 
                if Double.IsInfinity( G ) or Double.IsNan( G ) then S := ''
                                                               else S := G.ToString;
