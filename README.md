@@ -14,6 +14,7 @@
 > \* [Gamma Function](http://mathworld.wolfram.com/GammaFunction.html)：[Wolfram MathWorld](http://mathworld.wolfram.com)
 
 数値計算によって求める手法には以下の３つが存在するが、ここでは最も一般的な Lanczos近似 を用いる。
+
 * [Stirling's approximation](https://ja.wikipedia.org/wiki/スターリングの近似)
 * [Spouge's approximation](https://en.wikipedia.org/wiki/Spouge%27s_approximation)
 * [Lanczos approximation](https://en.wikipedia.org/wiki/Lanczos_approximation)
