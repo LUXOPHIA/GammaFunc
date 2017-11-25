@@ -25,7 +25,7 @@ Lanczos近似 は以下のように、適切な定数`g`に依存する係数列
 > ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/63215a71cb9d0058b928f302856859a89045acd2)  
 > \* [Lanczos approximation](https://en.wikipedia.org/wiki/Lanczos_approximation)：[Wikipedia](https://en.wikipedia.org)
 
-ガンマ関数は、発散する特異点を含まない正の定義域においても非常に大きな値となるので、[倍精度浮動小数点数](https://ja.wikipedia.org/wiki/倍精度浮動小数点数)（Double型）で計算したとしても、**約 172.7 以上の定義域**における[算術オーバーフロー](https://ja.wikipedia.org/wiki/算術オーバーフロー)が避けられない。
+ガンマ関数は、発散する特異点を含まない正の定義域においても非常に大きな値となるので、[倍精度浮動小数点数](https://ja.wikipedia.org/wiki/倍精度浮動小数点数)（Double型）で計算したとしても、**約 172.7 以上の定義域** における[算術オーバーフロー](https://ja.wikipedia.org/wiki/算術オーバーフロー)が避けられない。
 
 
 そこで、ガンマ関数を利用する諸計算には、ガンマ関数の対数である [**対数ガンマ関数（log-gamma function）**](https://en.wikipedia.org/wiki/Gamma_function#The_log-gamma_function)を間接的に利用した方が扱いやすい。
@@ -33,12 +33,12 @@ Lanczos近似 は以下のように、適切な定数`g`に依存する係数列
 > ![](http://mathworld.wolfram.com/images/interactive/LogGammaReImAbs.gif)  
 > \* [Log Gamma Function](http://mathworld.wolfram.com/LogGammaFunction.html)：[Wolfram MathWorld](http://mathworld.wolfram.com)
 
-なお、対数ガンマ関数`Ln(Γ(x))`は**ガンマ関数`Γ(x)`が正となる定義域**でしか定義されないので、対数ガンマ関数からガンマ関数を逆算する際には [**オイラーの相半公式（reflection formula）**](https://ja.wikipedia.org/wiki/ガンマ関数#.E7.9B.B8.E5.8D.8A.E5.85.AC.E5.BC.8F)を利用する必要がある。
+なお、対数ガンマ関数`Ln(Γ(x))`は **ガンマ関数`Γ(x)`が正となる定義域** でしか定義されないので、対数ガンマ関数からガンマ関数を逆算する際には [**オイラーの相半公式（reflection formula）**](https://ja.wikipedia.org/wiki/ガンマ関数#.E7.9B.B8.E5.8D.8A.E5.85.AC.E5.BC.8F)を利用する必要がある。
 
 > ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/6cc677d086fe3a8fe0c5eb3d5bca460565de56b5)  
 > \* [Lanczos approximation](https://en.wikipedia.org/wiki/Lanczos_approximation)：[Wikipedia](https://en.wikipedia.org)
 
-ここでは、２種類の実装方法を提供する。
+ここでは２種類の実装方法を提供する。
 
 * `LUX.Math.Special.Gamma.Lanczos`.pas  
     Lanczos近似に忠実な実装。
