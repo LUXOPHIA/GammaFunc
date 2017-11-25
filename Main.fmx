@@ -1,0 +1,116 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'GammaFunc'
+  ClientHeight = 480
+  ClientWidth = 640
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Size.Width = 510.000000000000000000
+    Size.Height = 460.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 506.000000000000000000
+    Viewport.Height = 456.000000000000000000
+  end
+  object Panel1: TPanel
+    Align = Right
+    Margins.Left = -10.000000000000000000
+    Position.X = 520.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'pushpanel'
+    TabOrder = 1
+    object Button1: TButton
+      Position.X = 10.000000000000000000
+      Position.Y = 130.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Run'
+      OnClick = Button1Click
+    end
+    object GroupBox1: TGroupBox
+      Position.X = 10.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 85.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'X'
+      TabOrder = 1
+      object LabelX0: TLabel
+        Position.X = 5.000000000000000000
+        Position.Y = 25.000000000000000000
+        Size.Width = 36.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Trailing
+        Text = 'Min :'
+        TabOrder = 2
+      end
+      object EditX0: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 3
+        Text = '-5'
+        Position.X = 45.000000000000000000
+        Position.Y = 25.000000000000000000
+        Size.Width = 45.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object LabelX1: TLabel
+        Position.X = 5.000000000000000000
+        Position.Y = 55.000000000000000000
+        Size.Width = 36.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Trailing
+        Text = 'Max :'
+        TabOrder = 0
+      end
+      object EditX1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Text = '5'
+        Position.X = 45.000000000000000000
+        Position.Y = 55.000000000000000000
+        Size.Width = 45.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object EditN: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      Text = '1000'
+      Position.X = 55.000000000000000000
+      Position.Y = 100.000000000000000000
+      Size.Width = 45.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object LabelN: TLabel
+      Position.X = 5.000000000000000000
+      Position.Y = 100.000000000000000000
+      Size.Width = 46.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Trailing
+      Text = 'DivN :'
+      TabOrder = 2
+    end
+  end
+end
