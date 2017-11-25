@@ -56,7 +56,7 @@ Lanczos近似 は以下のように、適切な定数`g`に依存する係数列
     * `function LnGammaP( const X_:Double ) :Double;`  
         > 正の定義域のみの対数ガンマ関数。
     * `function LnGamma( const X_:Double ) :Double;`  
-        > 対数ガンマ関数（負の値域は存在しない）。
+        > 対数ガンマ関数（負の値域は未定義）。
     * `function GammaP( const X_:Double ) :Double;`
         > 正の定義域のみのガンマ関数（対数ガンマ関数から逆算）。
     * `function Gamma( const X_:Double ) :Double;`
