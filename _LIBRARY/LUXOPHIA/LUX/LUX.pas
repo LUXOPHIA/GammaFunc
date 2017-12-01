@@ -366,10 +366,18 @@ function FileToBytes( const FileName_:string ) :TBytes;
 
 function Comb( N_,K_:Cardinal ) :UInt64;
 
-function BinPowN( const N_:Integer ) :Integer; overload;
-function BinPowN( const N_:Cardinal ) :Cardinal; overload;
-function BinPowN( const N_:Int64 ) :Int64; overload;
-function BinPowN( const N_:UInt64 ) :UInt64; overload;
+function BinPow( const N_:Integer ) :Integer; overload;
+function BinPow( const N_:Cardinal ) :Cardinal; overload;
+function BinPow( const N_:Int64 ) :Int64; overload;
+function BinPow( const N_:UInt64 ) :UInt64; overload;
+
+function IntToStr( const Value_:Integer; const N_:Integer; const C_:Char = '0' ) :String; overload;
+function IntToStr( const Value_:Int64; const N_:Integer; const C_:Char = '0' ) :String; overload;
+
+function FloatToStr( const Value_:Single; const N_:Integer ) :String; overload;
+function FloatToStr( const Value_:Double; const N_:Integer ) :String; overload;
+function FloatToStrP( const Value_:Single; const N_:Integer ) :String; overload;
+function FloatToStrP( const Value_:Double; const N_:Integer ) :String; overload;
 
 implementation //############################################################### ■
 
@@ -1731,24 +1739,104 @@ end;
 
 //------------------------------------------------------------------------------
 
-function BinPowN( const N_:Integer ) :Integer;
+function BinPow( const N_:Integer ) :Integer;
 begin
      Result := 1 shl N_;
 end;
 
-function BinPowN( const N_:Cardinal ) :Cardinal;
+function BinPow( const N_:Cardinal ) :Cardinal;
 begin
      Result := 1 shl N_;
 end;
 
-function BinPowN( const N_:Int64 ) :Int64;
+function BinPow( const N_:Int64 ) :Int64;
 begin
      Result := 1 shl N_;
 end;
 
-function BinPowN( const N_:UInt64 ) :UInt64;
+function BinPow( const N_:UInt64 ) :UInt64;
 begin
      Result := 1 shl N_;
+end;
+
+//------------------------------------------------------------------------------
+
+function IntToStr( const Value_:Integer; const N_:Integer; const C_:Char = '0' ) :String;
+var
+   I :Integer;
+begin
+     Result := IntToStr( Value_ );
+
+     if Value_ < 0 then I := 1
+                   else I := 0;
+
+     Result := Result.Insert( I, StringOfChar( C_, N_ + I - Length( Result ) ) );
+end;
+
+function IntToStr( const Value_:Int64; const N_:Integer; const C_:Char = '0' ) :String;
+var
+   I :Integer;
+begin
+     Result := IntToStr( Value_ );
+
+     if Value_ < 0 then I := 1
+                   else I := 0;
+
+     Result := Result.Insert( I, StringOfChar( C_, N_ + I - Length( Result ) ) );
+end;
+
+//------------------------------------------------------------------------------
+
+function FloatToStr( const Value_:Single; const N_:Integer ) :String;
+var
+   A :Single;
+   L :Integer;
+begin
+     A := Abs( Value_ );
+
+     if ( 0 < A ) and ( A < 1 ) then
+     begin
+          Result := FloatToStrF( A + 1, TFloatFormat.ffGeneral, 7, 0 );
+
+          L := Length( Result );
+
+          if L <= N_+1 then Exit( FloatToStrF( Value_, TFloatFormat.ffFixed, N_, L-2 ) );
+     end;
+
+     Result := FloatToStrF( Value_, TFloatFormat.ffGeneral, N_, 0 );
+end;
+
+function FloatToStr( const Value_:Double; const N_:Integer ) :String;
+var
+   A :Double;
+   L :Integer;
+begin
+     A := Abs( Value_ );
+
+     if ( 0 < A ) and ( A < 1 ) then
+     begin
+          Result := FloatToStrF( A + 1, TFloatFormat.ffGeneral, 15, 0 );
+
+          L := Length( Result );
+
+          if L <= N_+1 then Exit( FloatToStrF( Value_, TFloatFormat.ffFixed, N_, L-2 ) );
+     end;
+
+     Result := FloatToStrF( Value_, TFloatFormat.ffGeneral, N_, 0 );
+end;
+
+function FloatToStrP( const Value_:Single; const N_:Integer ) :String;
+begin
+     Result := FloatToStr( Value_, N_ );
+
+     if Value_ > 0 then Result := '+' + Result;
+end;
+
+function FloatToStrP( const Value_:Double; const N_:Integer ) :String;
+begin
+     Result := FloatToStr( Value_, N_ );
+
+     if Value_ > 0 then Result := '+' + Result;
 end;
 
 //############################################################################## □
