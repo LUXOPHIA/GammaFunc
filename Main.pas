@@ -67,9 +67,9 @@ begin
                G := LUX.Math.Special.Gamma.Ooura.Gamma( X );
 
                if Double.IsInfinity( G ) or Double.IsNan( G ) then S := ''
-                                                              else S := G.ToString;
+                                                              else S := FloatToStr( G, 10 );
 
-               Lines.Add( X.ToString + '	' + S );
+               Lines.Add( FloatToStr( X, 10 ) + '	' + S );
           end;
 
           EndUpdate;

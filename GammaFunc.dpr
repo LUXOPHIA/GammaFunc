@@ -23,7 +23,8 @@ uses
   LUX.D2.V4 in '_LIBRARY\LUXOPHIA\LUX\LUX.D2.V4.pas',
   LUX.D3.M4 in '_LIBRARY\LUXOPHIA\LUX\LUX.D3.M4.pas',
   LUX.Math.Special.Beta in '_LIBRARY\LUXOPHIA\LUX\» Math\LUX.Math.Special.Beta.pas',
-  LUX.Math.Distribution in '_LIBRARY\LUXOPHIA\LUX\» Math\LUX.Math.Distribution.pas';
+  LUX.Math.Distribution in '_LIBRARY\LUXOPHIA\LUX\» Math\LUX.Math.Distribution.pas',
+  LUX.Math.Special in '_LIBRARY\LUXOPHIA\LUX\» Math\LUX.Math.Special.pas';
 
 {$R *.res}
 
