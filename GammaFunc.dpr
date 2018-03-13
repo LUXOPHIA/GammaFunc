@@ -4,8 +4,6 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   Main in 'Main.pas' {Form1},
-  LUX.Math.Special.Gamma.Lanczos in '_LIBRARY\LUXOPHIA\LUX\» Math\LUX.Math.Special.Gamma.Lanczos.pas',
-  LUX.Math.Special.Gamma.Ooura in '_LIBRARY\LUXOPHIA\LUX\» Math\LUX.Math.Special.Gamma.Ooura.pas',
   LUX.D3 in '_LIBRARY\LUXOPHIA\LUX\LUX.D3.pas',
   LUX.D3.V4 in '_LIBRARY\LUXOPHIA\LUX\LUX.D3.V4.pas',
   LUX.D4.M4 in '_LIBRARY\LUXOPHIA\LUX\LUX.D4.M4.pas',
@@ -22,9 +20,11 @@ uses
   LUX.D2 in '_LIBRARY\LUXOPHIA\LUX\LUX.D2.pas',
   LUX.D2.V4 in '_LIBRARY\LUXOPHIA\LUX\LUX.D2.V4.pas',
   LUX.D3.M4 in '_LIBRARY\LUXOPHIA\LUX\LUX.D3.M4.pas',
-  LUX.Math.Special.Beta in '_LIBRARY\LUXOPHIA\LUX\» Math\LUX.Math.Special.Beta.pas',
-  LUX.Math.Distribution in '_LIBRARY\LUXOPHIA\LUX\» Math\LUX.Math.Distribution.pas',
-  LUX.Math.Special in '_LIBRARY\LUXOPHIA\LUX\» Math\LUX.Math.Special.pas';
+  LUX.Math.Special.Beta in '_LIBRARY\LUXOPHIA\LUX\Math\Special\LUX.Math.Special.Beta.pas',
+  LUX.Math.Special.Gamma.Lanczos in '_LIBRARY\LUXOPHIA\LUX\Math\Special\LUX.Math.Special.Gamma.Lanczos.pas',
+  LUX.Math.Special.Gamma.Ooura in '_LIBRARY\LUXOPHIA\LUX\Math\Special\LUX.Math.Special.Gamma.Ooura.pas',
+  LUX.Math.Distribution in '_LIBRARY\LUXOPHIA\LUX\Math\LUX.Math.Distribution.pas',
+  LUX.Math.Special in '_LIBRARY\LUXOPHIA\LUX\Math\LUX.Math.Special.pas';
 
 {$R *.res}
 
